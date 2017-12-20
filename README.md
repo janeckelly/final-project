@@ -15,9 +15,10 @@ Run the code!
 file_count_by_type.py
 
 Option 1: file path provided by user; .py must also be found at that file path
+
 Option 2: use the file path commented out in script (line 11)
 
-create_access_file.py
+<b>create_access_file.py</b>
 
 No input is required from user, but you must have droid_profile_md5_included.csv file to run script and you must have already created “access files” in the current directory that contains create_access_files.py and droid_profile_md5_included.csv.
 
@@ -35,5 +36,6 @@ output: droid_metadata_for_access_files.csv & access file, The Bill of Rights as
 In order to run this program, two things already have to be in place: the droid_profile_md5_included.csv and an empty folder called “access files” in the current directory. This program creates a subset of the metadata in the DROID profile .csv and appends it to a .txt file, which is a copy of a born-digital item in a theoretical manuscript collection, and then creates an access file for users.
 
 Executing the two functions!
+
 After defining these two fairly long functions, I was able to call the functions. I provided the two arguments in the script, rather than asking for user input since there are a lot of moving pieces in this program. I would expect/hope that someone who was using this program would be familiar enough with what’s going on here to provide the two arguments as input if that turns out to be more efficient than editing the script itself.
  
