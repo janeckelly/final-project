@@ -1,13 +1,12 @@
 # I figured out how to work with .csv files by using a Python textbook I cataloged in my 507 class :)
 # Irv Kalb, "Learn to Program with Python"
 
+# import all the modules i need
 import shutil
 import os
 import csv
 
-# import csv module
-#import csv
-
+# function definition: this function pulls specific data from a DROID profile csv and both prints it and saves it to a .csv
 def droid_data_for_access_file(file_name):
     # open csv file with DROID data
     droid_csv_file = open(file_name, 'rU')
@@ -89,8 +88,8 @@ def droid_data_for_access_file(file_name):
 
 
 # create_access_file function
-# requires original file and access file paths
-# function assumes we are working in a specific directory with access to a specific csv file
+# requires original file and access file paths as arguments
+# function assumes we are working in a specific directory with access to a csv file created using the function defined above
 def create_access_file(original_file_path, access_file_path):
 
     # copy file from one directory to another
