@@ -97,15 +97,6 @@ def create_access_file(original_file_path, access_file_path):
     # this doesn't change our current working directory so we are still in directory of original file
     shutil.copy2(original_file_path, access_file_path)
 
-    # move to access file directory
-    os.chdir('/Users/Jane/Documents/UIUC/452/final-project/access-files')
-
-    # open newly created access file; make it readable
-    access_file = open('The Bill of Rights as a Constitution_access-file.txt', 'r')
-
-    # change back to higher level directory so we can access DROID metadata
-    os.chdir('/Users/Jane/Documents/UIUC/452/final-project/')
-
     # open file that contains extracted file metadata from DROID
     droid_file = open('droid_metadata_for_access_files.csv', 'rU')
 
@@ -137,9 +128,12 @@ def create_access_file(original_file_path, access_file_path):
         metadata_to_add_to_file += header + ': ' + item + '\n'
     formatted_metadata = metadata_to_add_to_file + ' -- -- -- -- -- --  '
 
-    # return to work in the access-files folder
+    # move to the access-files folder
     os.chdir('/Users/Jane/Documents/UIUC/452/final-project/access-files')
 
+    # open newly created access file; make it readable
+    access_file = open('The Bill of Rights as a Constitution_access-file.txt', 'r')
+    
     # read file to file_text
     file_text = access_file.read()
 
